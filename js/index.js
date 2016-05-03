@@ -219,15 +219,18 @@ cnxhBtn.onclick=function(){
     }
 
 
+// var allimg=getClass("lunbowheelimgs")[3].getElementsByTagName("div");
+// var imgW=parseInt(getStyle(allimg[0],"width"));
+// console.log(imgW)
 
 
 
-
-//更改以后的轮播
+//更改以后的轮播   双下标
 var allfloor=$(".lunbowheel");
 for(var b=0;b<allfloor.length;b++){
   g(b);
 }
+
 function g(b){
     var now=0;
     var next=0;
@@ -240,7 +243,7 @@ function g(b){
 
 //最大的背景，所有图片，每个图片的宽度，轮播按钮，左边的按钮，右边的按钮，
     allimg[0].style.left=0+'px';
-    var t=setInterval(move,2000);
+    var t=setInterval(move,3000);
 
     function move(){
       if(!flag){
@@ -253,8 +256,8 @@ function g(b){
       }
       btn[now].className="nochangexiaoheidian";
       btn[next].className="changexiaoheidian";
-      allimg[next].style.left=439+'px';//哪个是下一个就把哪个放到后面
-      animate(allimg[now],{left:-imgW},300,function(){
+      allimg[next].style.left=436+'px';//哪个是下一个就把哪个放到后面
+      animate(allimg[now],{left:-436},300,function(){
         flag=true;
       });//前一个挪走
       animate(allimg[next],{left:0},300);//后一个变为0
@@ -265,7 +268,7 @@ function g(b){
       clearInterval(t)
     }
     bigbackground.onmouseout=function(){
-      t=setInterval(move,2000)
+      t=setInterval(move,3000)
     }
     for(var i=0;i<btn.length;i++){
       btn[i].index=i;
@@ -276,8 +279,8 @@ function g(b){
           return;
           }
           flag=false;
-          allimg[this.index].style.left=imgW+"px";//让下一次要获取的放在右边
-          animate(allimg[now],{left:-imgW},300);
+          allimg[this.index].style.left=436+"px";//让下一次要获取的放在右边
+          animate(allimg[now],{left:-436},300);
           animate(allimg[this.index],{left:0},300,
             function(){
               flag=true;
@@ -291,8 +294,8 @@ function g(b){
           return;
           }
           flag=false;
-          allimg[this.index].style.left=-imgW+"px";//让下一次要获取的放在右边
-          animate(allimg[now],{left:imgW},300);
+          allimg[this.index].style.left=-436+"px";//让下一次要获取的放在右边
+          animate(allimg[now],{left:436},300);
           animate(allimg[this.index],{left:0},300,
             function(){
               flag=true;
@@ -320,8 +323,8 @@ function g(b){
       }
       btn[now].className="nochangexiaoheidian";
       btn[next].className="changexiaoheidian";
-      allimg[next].style.left=-imgW+'px';//哪个是下一个就把哪个放到后面
-      animate(allimg[now],{left:imgW},300,function(){
+      allimg[next].style.left=-436+'px';//哪个是下一个就把哪个放到后面
+      animate(allimg[now],{left:436},300,function(){
         flag=true;
       });//前一个挪走
       animate(allimg[next],{left:0},300);//后一个变为0
@@ -374,11 +377,18 @@ for(var i=0;i<leftChose.length;i++){
 }
 window.onscroll=function(){
   var wh=document.documentElement.clientHeight;
-  console.log(wh)
   var weizhi=document.body.scrollTop?document.body:document.documentElement;
   var stop=weizhi.scrollTop;
+  var leftwheel=$(".leftChose")[0]//左侧楼层控制的大盒子
+  // console.log(leftwheel)
+  if(stop<=leftarr[0]-wh){
+      leftwheel.style.cssText+="display:none!important";
+  }
+  if(stop>leftarr[0]-wh){
+      leftwheel.style.cssText+="display:block!important";
+  }
   for(var j=0;j<leftChose.length;j++){
-    if(stop>=leftarr[j]){//当滚动条的高度 大于数组里面的某个值得时候，就改变了。
+    if(stop>=leftarr[j]-wh){//当滚动条的高度 大于数组里面的某个值得时候，就改变了。
       for(var z=0;z<leftChose.length;z++){
         lefttop[z].style="display:block";
         leftfoot[z].style="display:none";
@@ -389,21 +399,24 @@ window.onscroll=function(){
 
   }
 
-// //将asrc属性的值赋值给src
-//   for(var y=0;y<leftChose.length;y++){
-//     // console.log(y)
-//     if(stop>=leftarr[y]){
-//       getImg(y)
-//     }
-//   }
-// function getImg(y){
-//   var imgs=leftChose[y].getElementsByTagName("img")//获取每层的img
-//   console.log(imgs);
-//   for(var j=0;j<imgs.length;j++){
-//     imgs[j].src=imgs[j].getAttribute("asrc");
-//     // console.log(imgs.length)
-//   }
-// }
+//将asrc属性的值赋值给src
+    var axjz=document.querySelectorAll(".anxujiazai");
+    var axjzarr=[];
+    for(var aj=0;aj<axjz.length;aj++){
+        axjzarr.push(axjz[aj].offsetTop)//将每层到顶部的高度 放入数组中
+    }
+  for(var y=0;y<axjz.length;y++){
+    if(stop>=axjzarr[y]-wh){
+      getImg(y)
+    }
+  }
+function getImg(y){
+
+  var imgs=axjz[y].getElementsByTagName("img")//获取每层的img
+  for(var j=0;j<imgs.length;j++){
+    imgs[j].src=imgs[j].getAttribute("asrc");
+  }
+}
 
 
 //返回顶部

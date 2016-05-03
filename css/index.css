@@ -344,7 +344,7 @@
 	float: left;
 }
 .wzDhTop{
-	width: 374px;
+	width: 340px;
 	height:24px;
 	font-weight: 800;
 	color: #333;
@@ -2095,7 +2095,7 @@
 	float: left;
 }
 .three-top-right{
-	width: 580px;
+	width: 581px;
 	height: 36px;
 	border-left:1px solid #ededed;
 	position: absolute;
@@ -2453,7 +2453,7 @@
 	float: left;
 }
 .four-top-right{
-	width: 709px;
+	width: 706px;
 	height: 36px;
 	border-left:1px solid #ededed;
 	position: absolute;
@@ -3181,7 +3181,7 @@
 	float: left;
 }
 .six-top-right{
-	width: 607px;
+	width: 563px;
 	height: 36px;
 	border-left:1px solid #ededed;
 	position: absolute;
@@ -5787,6 +5787,7 @@
 	left:30px;
 	top:140px;
 	z-index: 30;
+	display: none;
 }
 .leftChose .box1{
 	width:30px;
@@ -5840,13 +5841,13 @@
 	/*background: #c81623;*/
 }
 .leftChose .box1:hover .top{
-	background: #c81623;
-	/*display: none;*/
+	/*background: #c81623;*/
+	display: none;
 }
 .leftChose .box1:hover .foot{
-	color: #fff;
-	display: block;
-	background: #c81623;
+	color: #fff!important;
+	display: block!important;
+	background: #c81623!important;
 }
 
 
@@ -5878,6 +5879,7 @@
 	width: 100px;
 	height: 170px;
 	overflow: hidden;
+	z-index: 999999;
 }
 .rightsolidonetop{
 	width: 35px;
