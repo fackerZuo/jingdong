@@ -344,7 +344,7 @@
 	float: left;
 }
 .wzDhTop{
-	width: 100px;
+	width: 340px;
 	height:24px;
 	font-weight: 800;
 	color: #333;
@@ -2453,7 +2453,7 @@
 	float: left;
 }
 .four-top-right{
-	width: 709px;
+	width: 706px;
 	height: 36px;
 	border-left:1px solid #ededed;
 	position: absolute;
@@ -3224,15 +3224,16 @@
 }
 .six-body-left{
 	width: 209px;
-	height:475px;
+	height:474px;
 	float: left;
 	border-right: 1px solid #ededed;
 }
 .six-body-left-left{
 	width: 210px;
-	height:474px;
+	height: 473px;
 	float: left;
 	border-bottom: 1px solid #ededed;
+	overflow: hidden;
 }
 .sixchosebj{
 	width: 1000px;
@@ -3312,7 +3313,7 @@
 }
 .six-body-leftbox3{
 	width: 210px;
-	height:145px;
+	height:146px;
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
@@ -3394,7 +3395,7 @@
 }
 .six-body-middle1{
 	width: 339px;
-	height:473px;
+	height:472px;
 	border-bottom: 1px solid #ededed;
 }
 .six-body-middle2{
@@ -3605,13 +3606,14 @@
 }
 .seven-body-left{
 	width: 209px;
-	height:475px;
-	float: left;
-	border-right: 1px solid #ededed;
+height: 474px;
+float: left;
+border-right: 1px solid #ededed;
+overflow: hidden;
 }
 .seven-body-left-left{
 	width: 210px;
-	height:474px;
+	height:473px;
 	float: left;
 	border-bottom: 1px solid #ededed;
 }
@@ -3693,7 +3695,7 @@
 }
 .seven-body-leftbox3{
 	width: 210px;
-	height:145px;
+	height:146px;
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
@@ -3985,13 +3987,14 @@
 }
 .eight-body-left{
 	width: 209px;
-	height:475px;
-	float: left;
-	border-right: 1px solid #ededed;
+height: 474px;
+float: left;
+border-right: 1px solid #ededed;
+overflow: hidden;
 }
 .eight-body-left-left{
 	width: 210px;
-	height:474px;
+	height:473px;
 	float: left;
 	border-bottom: 1px solid #ededed;
 }
@@ -4073,7 +4076,7 @@
 }
 .eight-body-leftbox3{
 	width: 210px;
-	height:145px;
+	height:146px;
 	position: absolute;
 	bottom: 0px;
 	left: 0px;
@@ -4365,13 +4368,14 @@
 }
 .nine-body-left{
 	width: 209px;
-	height:475px;
-	float: left;
-	border-right: 1px solid #ededed;
+height: 474px;
+float: left;
+border-right: 1px solid #ededed;
+overflow: hidden;
 }
 .nine-body-left-left{
 	width: 210px;
-	height:474px;
+	height:473px;
 	float: left;
 	border-bottom: 1px solid #ededed;
 }
@@ -4800,6 +4804,7 @@
 }
 .ten-body-left-right img{
 	border-bottom: 1px solid #ededed;
+	border-right: 1px solid #ededed;
 }
 .ten-body-leftbox1{
 	width: 210px;
@@ -4885,7 +4890,7 @@
 }
 .ten-body-middle{
 	width:439px;
-	height: 474px;
+	height: 473px;
 	position: absolute;
 	left: 430px;
 	border-right: 1px solid #ededed;
@@ -4925,7 +4930,6 @@
 .ten-body-middle2{
 	width: 440px;
 	height:236px;
-	border-bottom: 1px solid #ededed;
 }
 .ten-body-middle2 img{
 	float: left;
@@ -5189,11 +5193,12 @@
 }
 .eleven-body-left{
 	width: 210px;
-	height:471px;
-	float: left;
-	margin-top: 2px;
-	border-right: 1px solid #ededed;
-	border-bottom: 1px solid #ededed;
+height: 470px;
+float: left;
+margin-top: 2px;
+border-right: 1px solid #ededed;
+border-bottom: 1px solid #ededed;
+overflow: hidden;
 }
 .eleven-body-left .leftbox2{
 	width: 190px;
@@ -5301,7 +5306,7 @@
 	bottom: 0px;
 	left: 211px;
 	border-right: 1px solid #ededed;
-	border-bottom: 1px solid #ededed;
+	/*border-bottom: 1px solid #ededed;*/
 }
 .eleven-body-middle-top{
 	width: 395px;
