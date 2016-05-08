@@ -420,7 +420,7 @@ function getImg(y){
 
 
 //返回顶部
-var solidFoot=$(".rightsolidsixtop")[0];
+var solidFoot=$(".totop")[0];
  solidFoot.onclick=function(){
     animate(doc,{scrollTop:0},500)
   }
