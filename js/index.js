@@ -336,14 +336,6 @@ function g(b){
 
 
 
-
-
-
-
-
-
-
-
 // 鼠标移入图片图片会动一下
   var ttdjImg=getClass("ttdjBodyLeftChange")[0].getElementsByTagName("img");
   // console.log(ttdjImg)

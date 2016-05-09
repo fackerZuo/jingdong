@@ -84,7 +84,6 @@ function getText(obj,val){
 
  //去除字符串空格 第一个输入字符串，第二个是去除的位置
  //去掉字符串里面的空格
-            
          function trim(str,type){
        type=type||'lr';
         if(type=='r'){
@@ -149,9 +148,9 @@ function getText(obj,val){
               type=type||"a";
               if(type=="a"){
                       for(var i=0;i<child.length;i++){ 
-                  if(child[i].nodeType==1){
-                    newarr.push(child[i]);
-                  }
+                        if(child[i].nodeType==1){
+                          newarr.push(child[i]);
+                        }
                       }
               }
               if(type=="b"){
